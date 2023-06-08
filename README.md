@@ -1,10 +1,31 @@
-- 👋 Hi, I’m @dah-romy
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+<?php
 
-<!---
-dah-romy/dah-romy is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+namespace AshBaker;
+
+class About extends Me
+{
+    public function getCurrentWorkplace(): array
+    {
+        return [
+            'workplace' => [
+                'company' => 'Qquicker',
+                'position' => 'Founder'         
+            ]
+        ];
+    }
+
+    public function getDailyKnowledge(): array
+    {
+        return [
+            Php::class,
+            Javascript::class,
+            Symfony::class,
+            Vuejs::class,
+        ];
+    }
+
+    public function getFutureGoal(): string
+    {
+        return 'To contribute to open source.';
+    }
+}
